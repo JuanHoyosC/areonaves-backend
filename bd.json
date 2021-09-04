@@ -1,28 +1,48 @@
 {
-    "usuarios": [{
-            "nombre": "Juan Carlos",
-            "apellidos": "Hoyos"
-        },
-        {
-            "id": 1,
-            "country_id": 1,
-            "name": "Cair Paravel",
-            "capital": 1
-        }
-    ],
-    "areonaves": [{
-            "id": 1,
-            "ubicacion": "",
-            "piloto": "",
-            "llegada": "",
-            "salida": "",
-            "pasajeros": ""
-        }
-
-    ],
     "administrador": {
         "correo": "admin@gmail.com",
         "password": "admin@1234567",
         "role": "admin"
-    }
+    },
+    "areonaves": [{
+            "id": 2
+        },
+        {
+            "id": 3
+        },
+        {
+            "id": 4
+        },
+        {
+            "id": 5
+        },
+        {
+            "id": 6
+        },
+        {
+            "id": 7
+        },
+        {
+            "id": 8
+        },
+        {
+            "id": 9
+        },
+        {
+            "id": 10
+        },
+        {
+            "ubicacion": "Luna",
+            "llegada": "",
+            "salida": "",
+            "pasajeros": "",
+            "reservado": false,
+            "id": 11
+        }
+    ],
+    "pilotos": [{
+        "id": 1,
+        "nombre": "Juan",
+        "role": "piloto"
+    }]
 }

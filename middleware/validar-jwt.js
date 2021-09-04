@@ -25,4 +25,18 @@ const validarJWT = (req, res, next) => {
 
 }
 
-module.exports = { validarJWT }
+const validarRol = (req, res, next) => {
+    const token = req.header('x-token');
+    const { uid } = jwt.verify(token, process.env.JWT_SECRET);
+
+    if (uid.role !== 'admin') {
+        return res.status(401).json({
+            ok: false,
+            msg: "No tiene permiso de administrador"
+        })
+    }
+    next();
+
+}
+
+module.exports = { validarJWT, validarRol }

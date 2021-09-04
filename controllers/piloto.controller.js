@@ -1,12 +1,11 @@
 const fetch = require('node-fetch');
 
-//Funcion que se encarga de crear una areonave
-const crearAreonave = async(req, res) => {
-
+//Funcion que se encarga de crea un piloto
+const crearPiloto = async(req, res) => {
     try {
 
-        //Envia al json la información de la areonave a crear
-        const resApi = await fetch(`${process.env.BASE_URL}/areonaves`, {
+        //Envia al json la información del piloto a crear
+        const resApi = await fetch(`${process.env.BASE_URL}/pilotos`, {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -18,7 +17,7 @@ const crearAreonave = async(req, res) => {
         //Retorna al frontend la confirmación
         res.status(200).json({
             ok: true,
-            msg: 'Areonave creada'
+            msg: "Piloto creado"
         });
     } catch (error) {
         return res.status(500).json({
@@ -26,22 +25,20 @@ const crearAreonave = async(req, res) => {
             msg: 'Hubo un error en el servidor'
         })
     }
-
 }
 
-
-//Funcion que se encarga de obtener todas las areonaves creadas
-const obtenerAreonaves = async(req, res) => {
+//Funcion que se encarga de obtener pilotos
+const obtenerPilotos = async(req, res) => {
     try {
 
-        //Obtiene todas las areonaves del archivo json
-        const resApi = await fetch(`${process.env.BASE_URL}/areonaves`)
-        const areonaves = await resApi.json();
+        //Obtiene todas los pilotos del archivo json
+        const resApi = await fetch(`${process.env.BASE_URL}/pilotos`)
+        const pilotos = await resApi.json();
 
-        //Retorna al frontend todas las areonaves
+        //Retorna al frontend todos los pilotos
         res.status(200).json({
             ok: true,
-            areonaves
+            pilotos
         })
     } catch (error) {
         return res.status(400).json({
@@ -49,24 +46,22 @@ const obtenerAreonaves = async(req, res) => {
             msg: 'Hubo un error en el servidor'
         })
     }
-
 }
 
-//Funcion que se encarga de obtener una areonave por su id
-const obtenerAreonave = async(req, res) => {
-
+//Funcion que se encarga de obtener un piloto
+const obtenerPiloto = async(req, res) => {
     try {
-        //Lee el id de la areonave
+        //Lee el id de la piloto
         const { id } = req.params;
 
-        //Obtiene la areonave correspondiente al id
-        const resApi = await fetch(`${process.env.BASE_URL}/areonaves/?id=${id}`)
-        const areonaves = await resApi.json();
+        //Obtiene el piloto correspondiente al id
+        const resApi = await fetch(`${process.env.BASE_URL}/pilotos/?id=${id}`)
+        const piloto = await resApi.json();
 
         //Envia al frontend la areoonave
         res.status(200).json({
             ok: true,
-            areonaves
+            piloto
         })
     } catch (error) {
         return res.status(500).json({
@@ -74,22 +69,21 @@ const obtenerAreonave = async(req, res) => {
             msg: 'Hubo un error en el servidor'
         })
     }
-
 }
 
-
-//Funcion que se encarga de actualizar una areonave seleccionada
-const actualizarAreonave = async(req, res) => {
+//Funcion que se encarga de actualizar un piloto
+const actualizarPiloto = async(req, res) => {
 
     try {
         //No permite que se envie el id y se actualice
-        delete req.body.id
+        delete req.body.id;
+        delete req.body.role;
 
-        //Lee el id de la areonave que será actualizada
+        //Lee el id del piloto que será actualizado
         const { id } = req.params;
 
         //Envia los datos que serán actualizados
-        const resApi = await fetch(`${process.env.BASE_URL}/areonaves/${id}`, {
+        const resApi = await fetch(`${process.env.BASE_URL}/pilotos/${id}`, {
             method: 'PATH',
             headers: {
                 'Content-Type': 'application/json'
@@ -100,7 +94,7 @@ const actualizarAreonave = async(req, res) => {
         await resApi.json();
         res.status(200).json({
             ok: true,
-            msg: "Areonave actualiza"
+            msg: 'Piloto actualizado'
         })
     } catch (error) {
         console.log(error)
@@ -112,21 +106,21 @@ const actualizarAreonave = async(req, res) => {
 
 }
 
-//Funcion que se encarga de eliminar una areonave por su id
-const borrarAreonave = async(req, res) => {
+//Funcion que se encarga de borrar un piloto
+const borrarPiloto = async(req, res) => {
 
     try {
         //Lee el id de la areonave que será eliminada
         const { id } = req.params;
 
         //Se encarga de eliminar la areonave del archivo json
-        const resApi = await fetch(`${process.env.BASE_URL}/areonaves/${id}`, { method: 'DELETE' });
+        const resApi = await fetch(`${process.env.BASE_URL}/pilotos/${id}`, { method: 'DELETE' });
         await resApi.json();
 
         //Envia el mensaje de confirmación
         res.json({
             ok: true,
-            msg: 'Areonave eliminada'
+            msg: 'Piloto eliminado'
         })
     } catch (error) {
         return res.status(500).json({
@@ -137,10 +131,11 @@ const borrarAreonave = async(req, res) => {
 
 }
 
+
 module.exports = {
-    crearAreonave,
-    obtenerAreonave,
-    obtenerAreonaves,
-    actualizarAreonave,
-    borrarAreonave
+    crearPiloto,
+    obtenerPilotos,
+    obtenerPiloto,
+    actualizarPiloto,
+    borrarPiloto
 }

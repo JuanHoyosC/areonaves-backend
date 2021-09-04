@@ -11,6 +11,7 @@ app.use(express.json());
 //rutas
 app.use('/api/auth', require('./routes/admin.route'));
 app.use('/api/areonave', require('./routes/areonave.route'));
+app.use('/api/piloto', require('./routes/piloto.route'));
 
 
 app.listen('3000', () => {
