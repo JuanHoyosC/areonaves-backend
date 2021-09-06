@@ -14,6 +14,6 @@ app.use('/api/areonave', require('./routes/areonave.route'));
 app.use('/api/usuario', require('./routes/usuario.route'));
 
 
-app.listen('3000', () => {
+app.listen('3000' || process.env.PORT, () => {
     console.log('server corriendo en el puerto 3000')
 })
