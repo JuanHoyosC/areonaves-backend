@@ -5,7 +5,7 @@ const {
     obtenerUsuario,
     actualizarUsuario,
     borrarUsuario
-} = require('../controllers/Usuario.controller');
+} = require('../controllers/usuario.controller');
 
 router.get('/obtener', [validarJWT, validarRol], obtenerUsuarios);
 router.get('/obtener/:id', [validarJWT], obtenerUsuario);
