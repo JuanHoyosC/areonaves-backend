@@ -1,48 +1,128 @@
 {
-    "administrador": {
-        "correo": "admin@gmail.com",
-        "password": "admin@1234567",
-        "role": "admin"
-    },
-    "areonaves": [{
-            "id": 2
-        },
+  "areonaves": [
+    {
+      "ubicacion": "Luna",
+      "llegada": "2021-09-22",
+      "salida": "2021-08-22",
+      "pasajeros": 10,
+      "reservado": false,
+      "id": 1
+    }
+  ],
+  "usuarios": [
+    {
+      "correo": "admin@gmail.com",
+      "password": "$2a$10$Muf/M6c6ezuH0nOlsYdbxODJ2DN3wMi.4SInm79viYBFxQo9XncxC",
+      "usuario": "Admin principal",
+      "role": "admin",
+      "id": 1,
+      "areonaves": [
         {
-            "id": 3
-        },
-        {
-            "id": 4
-        },
-        {
-            "id": 5
-        },
-        {
-            "id": 6
-        },
-        {
-            "id": 7
-        },
-        {
-            "id": 8
-        },
-        {
-            "id": 9
-        },
-        {
-            "id": 10
-        },
-        {
-            "ubicacion": "Luna",
-            "llegada": "",
-            "salida": "",
-            "pasajeros": "",
-            "reservado": false,
-            "id": 11
+          "ubicacion": "Barranquilla",
+          "llegada": "2021-09-16",
+          "salida": "2021-09-02",
+          "pasajeros": 10,
+          "reservado": false,
+          "id": 2
         }
-    ],
-    "pilotos": [{
-        "id": 1,
-        "nombre": "Juan",
-        "role": "piloto"
-    }]
+      ]
+    },
+    {
+      "correo": "juan3@gmail.com",
+      "password": "$2a$10$q1zMkRssM7xYmwvVHaQm/uEo4Y2xdjbLxmJ/.ibGe0wCvhYZAjt5e",
+      "usuario": "Juan Hoyos",
+      "role": "piloto",
+      "areonaves": [
+        {
+          "ubicacion": "Barranquilla",
+          "llegada": "2021-09-22",
+          "salida": "2021-09-03",
+          "pasajeros": 45,
+          "reservado": false,
+          "id": 1
+        },
+        {
+          "ubicacion": "Barranquilla",
+          "llegada": "2021-09-30",
+          "salida": "2021-09-03",
+          "pasajeros": 99,
+          "reservado": false,
+          "id": 2
+        },
+        {
+          "ubicacion": "Barranquilla",
+          "llegada": "2021-10-01",
+          "salida": "2021-09-04",
+          "pasajeros": 55,
+          "reservado": false,
+          "id": 2
+        },
+        {
+          "ubicacion": "Barranquilla",
+          "llegada": "2021-09-16",
+          "salida": "2021-09-08",
+          "pasajeros": 88,
+          "reservado": false,
+          "id": 1
+        },
+        {
+          "ubicacion": "Barranquilla",
+          "llegada": "2021-10-06",
+          "salida": "2021-09-15",
+          "pasajeros": 34,
+          "reservado": false,
+          "id": 1
+        },
+        {
+          "ubicacion": "Bogota",
+          "llegada": "2021-10-05",
+          "salida": "2021-09-17",
+          "pasajeros": 45,
+          "reservado": false,
+          "id": 2
+        },
+        {
+          "ubicacion": "Barranquilla",
+          "llegada": "2021-09-15",
+          "salida": "2021-09-10",
+          "pasajeros": 10,
+          "reservado": false,
+          "id": 1
+        },
+        {
+          "ubicacion": "Barranquilla",
+          "llegada": "2021-09-22",
+          "salida": "2021-09-10",
+          "pasajeros": 45,
+          "reservado": false,
+          "id": 1
+        },
+        {
+          "ubicacion": "Barranquilla",
+          "llegada": "2021-09-24",
+          "salida": "2021-09-02",
+          "pasajeros": 10,
+          "reservado": false,
+          "id": 1
+        },
+        {
+          "ubicacion": "fsdfasdf",
+          "llegada": "2021-09-30",
+          "salida": "2021-09-11",
+          "pasajeros": 10,
+          "reservado": false,
+          "id": 2
+        },
+        {
+          "ubicacion": "Barranquilla",
+          "llegada": "2021-10-07",
+          "salida": "2021-09-18",
+          "pasajeros": 106,
+          "reservado": true,
+          "id": 1
+        }
+      ],
+      "id": 4
+    }
+  ]
 }

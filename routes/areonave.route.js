@@ -5,13 +5,18 @@ const {
     obtenerAreonaves,
     obtenerAreonave,
     actualizarAreonave,
-    borrarAreonave
+    borrarAreonave,
+    alquilarAreonave,
+    devolverAreonave
 } = require('../controllers/areonave.controller');
 
-router.get('/obtener', [validarJWT, validarRol], obtenerAreonaves);
-router.get('/obtener/:id', [validarJWT, validarRol], obtenerAreonave);
+router.get('/obtener', [validarJWT], obtenerAreonaves);
+router.get('/obtener/:id', [validarJWT], obtenerAreonave);
 router.post('/crear', [validarJWT, validarRol], crearAreonave);
 router.put('/actualizar/:id', [validarJWT, validarRol], actualizarAreonave);
+router.put('/alquilar/:id', [validarJWT], alquilarAreonave);
+router.put('/devolver/:id', [validarJWT], devolverAreonave);
+
 router.delete('/borrar/:id', [validarJWT, validarRol], borrarAreonave);
 
 

@@ -4,6 +4,7 @@
     "description": "",
     "main": "index.js",
     "dependencies": {
+        "bcryptjs": "^2.4.3",
         "cors": "^2.8.5",
         "dotenv": "^10.0.0",
         "express": "^4.17.1",
@@ -13,7 +14,7 @@
     },
     "devDependencies": {},
     "scripts": {
-        "serve": "json-server --watch bd.json --port=3001",
+        "serve": "json-server  bd.json --port=3001",
         "dev": "nodemon index"
     },
     "author": "",
