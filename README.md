@@ -2,13 +2,13 @@
 
 # incicializar api
 
-## npm install
+* ### npm install
 
-## npm start
+* ### npm start
 
 # incicializar json-server
 
-# cd /JSON-SERVER
+* ### cd /JSON-SERVER
 
-## npm install
-## npm start
+* ### npm install
+* ### npm start
