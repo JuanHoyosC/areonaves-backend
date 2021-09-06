@@ -1,10 +1,10 @@
 {
   "areonaves": [
     {
-      "ubicacion": "Luna",
-      "llegada": "2021-09-22",
-      "salida": "2021-08-22",
-      "pasajeros": 10,
+      "ubicacion": "Barranquilla",
+      "llegada": "2021-10-01",
+      "salida": "2021-09-04",
+      "pasajeros": 106,
       "reservado": false,
       "id": 1
     }
@@ -24,14 +24,22 @@
           "pasajeros": 10,
           "reservado": false,
           "id": 2
+        },
+        {
+          "ubicacion": "Barranquilla",
+          "llegada": "2021-10-01",
+          "salida": "2021-09-04",
+          "pasajeros": 106,
+          "reservado": false,
+          "id": 1
         }
       ]
     },
     {
       "correo": "juan3@gmail.com",
       "password": "$2a$10$q1zMkRssM7xYmwvVHaQm/uEo4Y2xdjbLxmJ/.ibGe0wCvhYZAjt5e",
-      "usuario": "Juan Hoyos",
-      "role": "piloto",
+      "usuario": "Juan Hoyos c",
+      "role": "admin",
       "areonaves": [
         {
           "ubicacion": "Barranquilla",
@@ -123,6 +131,30 @@
         }
       ],
       "id": 4
+    },
+    {
+      "correo": "juancarloshoyoscabarique@gmail.com",
+      "password": "$2a$10$3EK7TJUIZ20EAe8GL5Tg5ureM8wFKdJDKxKxN.RbKjpCnezUutBge",
+      "usuario": "Juan Hoyos",
+      "role": "piloto",
+      "areonaves": [],
+      "id": 5
+    },
+    {
+      "correo": "juancarloshoyoscabarique2@gmail.com",
+      "password": "$2a$10$1R9rybL1Di8.WLRupcmyqOA.L2z2a4X5gD1jyPXACXG/CMUTpJUpe",
+      "usuario": "Juan Hoyos",
+      "role": "piloto",
+      "areonaves": [],
+      "id": 6
+    },
+    {
+      "correo": "juancarloshoyoscabarique34@gmail.com",
+      "password": "$2a$10$/IpTVFTwcqWNOMCYjfXnfO2.L.wy2qRTXVlqC3C2phK9strNKFJh6",
+      "usuario": "Jshiro",
+      "role": "piloto",
+      "areonaves": [],
+      "id": 7
     }
   ]
 }

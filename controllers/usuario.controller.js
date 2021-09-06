@@ -64,6 +64,13 @@ const actualizarUsuario = async(req, res) => {
 
         //Lee el id del Usuario que será actualizado
         const { id } = req.params;
+        //Comprueba que no se pueda actualizar el administrador principal
+        if (id == 1) {
+            return res.status(400).json({
+                ok: false,
+                msg: 'No puedes actualizar al administrador principal'
+            })
+        }
 
         //Retorna los datos que serán actualizados
         const newData = await actualizar(`${process.env.BASE_URL}/usuarios/?id=${id}`, req.body);

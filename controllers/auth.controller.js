@@ -74,7 +74,7 @@ const crearUsuario = async(req, res) => {
         //Encripta la contraseña para guardarse en el json
         const salt = bcrypt.genSaltSync();
         req.body.password = bcrypt.hashSync(password, salt);
-        console.log(bcrypt.hashSync('admin@1234567', salt));
+
 
         //Envia al json la información del usuario a crear
         const resApi = await fetch(`${process.env.BASE_URL}/usuarios`, {
@@ -85,17 +85,19 @@ const crearUsuario = async(req, res) => {
             body: JSON.stringify(req.body)
         });
 
-        await resApi.json();
+        const newUser = await resApi.json();
 
-        delete req.body.password;
+        delete newUser.password;
+
+        console.log(newUser, 'dfghjkl')
 
         //Genera un token que será enviado el frontend
-        const token = await generarJWT(req.body);
+        const token = await generarJWT(newUser);
 
         //Retorna al frontend la confirmación
         res.status(200).json({
             ok: true,
-            usuario: req.body,
+            usuario: newUser,
             token
         });
     } catch (error) {
